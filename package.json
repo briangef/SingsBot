@@ -1,0 +1,28 @@
+{
+  "name": "singsbot",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "bulma": "^0.7.4",
+    "node-sass": "^4.11.0",
+    "office-ui-fabric-react": "^6.170.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-scripts-ts": "3.1.0",
+    "socket.io-client": "^2.2.0"
+  },
+  "scripts": {
+    "start": "react-scripts-ts start",
+    "build": "react-scripts-ts build",
+    "build-sass": "node-sass --watch _sass  -o public/css",
+    "test": "react-scripts-ts test --env=jsdom",
+    "eject": "react-scripts-ts eject"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.11",
+    "@types/node": "^11.13.7",
+    "@types/react": "^16.8.14",
+    "@types/react-dom": "^16.8.4",
+    "typescript": "^3.4.5"
+  }
+}
