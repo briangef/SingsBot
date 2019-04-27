@@ -20,7 +20,7 @@ function NavBar() {
                     <a className="navbar-item">Song List</a>
                     <a className="navbar-item">Singers</a>
                     <a className="navbar-item is-dark sb-login-item" 
-                        href="https://id.twitch.tv/oauth2/authorize?client_id=uqlrrqazyxx0nbi4oflum1lg5agy34&redirect_uri=https%3A%2F%2Fsingsbot.netlify.com%2fauth&response_type=token&scope=user:read:broadcast+user:read:email">
+                        href="https://id.twitch.tv/oauth2/authorize?client_id=uqlrrqazyxx0nbi4oflum1lg5agy34&redirect_uri=https%3A%2F%2Fsingsbot.netlify.com%2f&response_type=token&scope=user:read:broadcast+user:read:email">
                         Login with Twitch
                     </a>
                 </div>
