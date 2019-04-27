@@ -1,37 +1,36 @@
-import { IPersonaProps, IPersonaSharedProps, Persona, PersonaPresence, PersonaSize } from 'office-ui-fabric-react/lib/Persona';
 import React from 'react';
-import NavBar from './NavBar';
-
-function onRenderCoin(props: IPersonaProps){
-  const { coinSize, imageAlt, imageUrl } = props;
-  return (
-    <div className="TwitchIconCoin">
-      <img src={imageUrl} alt={imageAlt} width={coinSize} height={coinSize} />
-    </div>
-  );
-};
+import NavBar from './Components/NavBar';
 
 function App() {
-
-  const userPersona : IPersonaSharedProps = {
-    imageInitials : 'DJC',
-    imageUrl : 'https://static-cdn.jtvnw.net/jtv_user_pictures/726a063a-bb31-4802-af62-f5174fbed30a-profile_image-70x70.png',
-    secondaryText : 'Singing "TRIBUTE by Tenacious D"',
-    tertiaryText : '399 Followers',
-    text : 'DadJokeCinema'
-  }
-
   return (
     <div id="SingsBotApp">
       <NavBar />
       <div className="container">
-        <Persona
-          {...userPersona}
-          coinSize={72}
-          size={PersonaSize.size72}
-          onRenderCoin={onRenderCoin}
-          presence={PersonaPresence.online}
-        />
+        <section className="hero sb-intro">
+          <div className="hero-body">
+            <div className="container columns">
+              <div className="column sb-intro-textcol">
+                <h1 className="title">
+                  If you play Twitch Sings, <span className="sb-sings-text">SingsBot</span> is your Best Friend
+                </h1>
+                <h2 className="subtitle">
+                  Manage your queues, track completed duets and who you've sung with, and see what your friends and
+                  favorite streamers are singing - all in one place.
+                </h2>
+              </div>
+              <div className="column has-text-centered">
+                <img src="images/placeholder.png" />
+              </div>
+            </div>
+          </div>
+        </section>
+        <section className="hero sb-singstats">
+          <div className="hero-body">
+            <h1 className="title">
+              Who is playing Sings right now?
+            </h1>
+          </div>
+        </section>
       </div>
     </div>
   );

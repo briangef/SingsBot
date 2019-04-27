@@ -1,3 +1,4 @@
+@import 'bulma'
 html
     font-size: 16px
     min-width: 300px
@@ -7,15 +8,42 @@ html
     margin: 0
     padding: 0
     box-sizing: border-box
-    background: #111111
+
 body, html
     min-height: 100vh
     height: 100vh
-body.SingsBot
-    background-color: #111111
-
+    background: rgb(18,10,39);
+    background: linear-gradient(180deg, rgba(18,10,39,1) 0%, rgba(18,10,39,1) 20%, rgba(97,50,150,1) 100%);
+    
 .TwitchIconCoin
     border-radius: 4px
 
 a.sb-login-item
-    padding: 0.5rem 2.5rem
+    padding: 0.5rem 3rem
+
+.navbar 
+    margin-bottom: 3.5rem
+
+.navbar.is-dark .navbar-brand > a.navbar-item
+    padding: 0.5rem 1.75rem    
+
+.navbar.is-dark .navbar-brand > a.navbar-item:hover
+    background: transparent
+
+.navbar-menu > navbar-end > a.navbar-item:hover
+    background: rgb(9,5,19)
+
+.hero .title:not(:last-child)
+    padding-bottom: 1.5rem
+
+.sb-intro .title
+    font-size: 4rem;    
+
+.sb-intro img 
+    max-width: 500px;
+
+.sb-intro-textcol 
+    max-width: 550px;
+
+.sb-sings-text 
+    color: $yellow
