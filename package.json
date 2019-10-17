@@ -1,6 +1,6 @@
 {
   "name": "singsbot",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
   "dependencies": {
     "@types/socket.io-client": "^1.4.32",
@@ -11,14 +11,17 @@
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-scripts-ts": "3.1.0",
-    "whatwg-fetch": "^3.0.0"
+    "twitch-js": "^1.2.17",
+    "whatwg-fetch": "^3.0.0",
+    "winston": "^3.2.1"
   },
   "scripts": {
     "start": "react-scripts-ts start",
     "build": "react-scripts-ts build",
     "build-sass": "node-sass --watch _sass  -o public/css",
     "test": "react-scripts-ts test --env=jsdom",
-    "eject": "react-scripts-ts eject"
+    "eject": "react-scripts-ts eject",
+    "run-server": "node ./src/Server/index.js"
   },
   "devDependencies": {
     "@types/jest": "^24.0.11",

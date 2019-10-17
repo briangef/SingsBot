@@ -5,6 +5,7 @@ function NavBar() {
         <nav className="navbar is-dark" role="navigation" aria-label="main-navigation">
             <div className="navbar-brand">
                 <a className="navbar-item" href="/">
+                    <img src="/images/icon.png" />
                     <img src="/images/Logo.png" />
                 </a>
 

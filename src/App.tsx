@@ -1,33 +1,38 @@
-import React from 'react';
+import React, { useState } from 'react';
 import NavBar from './Components/NavBar';
+import SBIntro from './Components/SBIntro';
+import HelixAPI from './HelixAPI';
 
 function App() {
+  const Helix = new HelixAPI();
+  const [ IsLoggedIn, setLoginStatus ] = useState(false);
+  const [ SingsPlayerCount, setSingsPlayerCount ] = useState(0);
+  const [ SingsPlayerData, setSingsPlayerData ] = useState<any[]>([]);
+
+  // Get Sings Player List
+  Helix.GetSingsPlayers()
+  .then(response => {
+    setSingsPlayerCount(response.data.length);
+    response.data.forEach((player: object) => {
+      setSingsPlayerData([...SingsPlayerData, 
+        {
+          id: SingsPlayerData.length,
+          value: player
+        }
+      ]);
+    });
+    setLoginStatus(false);
+  });
+
   return (
     <div id="SingsBotApp">
       <NavBar />
       <div className="container">
-        <section className="hero sb-intro">
-          <div className="hero-body">
-            <div className="container columns">
-              <div className="column sb-intro-textcol">
-                <h1 className="title">
-                  If you play Twitch Sings, <span className="sb-sings-text">SingsBot</span> is your Best Friend
-                </h1>
-                <h2 className="subtitle">
-                  Manage your queues, track completed duets and who you've sung with, and see what your friends and
-                  favorite streamers are singing - all in one place.
-                </h2>
-              </div>
-              <div className="column has-text-centered">
-                <img src="images/placeholder.png" />
-              </div>
-            </div>
-          </div>
-        </section>
+        <SBIntro IsLoggedIn={IsLoggedIn} />
         <section className="hero sb-singstats">
           <div className="hero-body">
             <h1 className="title">
-              Who is playing Sings right now?
+              {SingsPlayerCount} People are playing Twitch Sings online right now
             </h1>
           </div>
         </section>
