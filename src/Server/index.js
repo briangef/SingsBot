@@ -8,7 +8,7 @@ const options = {
         reconnect: true,
     },
     identity: {
-        password: 'oauth:wv5nce1kwgumgauyo6trt7xqk5x3de',
+        password: process.env.OKEY,
         username: 'SingsBot',
     },
     options: {
